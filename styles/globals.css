@@ -1,26 +1,215 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@font-face {
+  font-family: "Whitney";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Whitney"), url("../fonts/whitneymedium.woff") format("woff");
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
+@font-face {
+  font-family: "Whitney Book";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Whitney Book"), url("../fonts/whitneybook.woff") format("woff");
 }
+@import-normalize;
+@tailwind base;
+@tailwind components;
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+body {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  font-family: "Whitney Book", sans-serif;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-select: none;
+}
+
+.shadow-sm-discord {
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 1px 1px;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+  /* color: hsla(213,9.4%,45.9%,0.24);
+  color: rgba(106, 116, 128, 0.24) */
+}
+
+@layer components {
+  .sidebar-container {
+    @apply relative flex min-h-0 flex-auto flex-col overflow-x-hidden
+    overflow-y-scroll pt-3;
   }
-  body {
-    color: white;
-    background: black;
+
+  .sidebar-icon-wrap {
+    @apply relative mb-2 flex w-[72px] justify-center;
   }
+
+  .sidebar-icon {
+    @apply relative flex h-12 w-12 cursor-pointer items-center
+    justify-center rounded-3xl
+    shadow-sm transition-all duration-150
+    ease-linear hover:rounded-2xl;
+  }
+
+  .sidebar-icon-image {
+    @apply relative flex h-12 w-12 cursor-pointer items-center
+    justify-center rounded-3xl
+    transition-all duration-150 ease-linear
+    hover:rounded-2xl;
+  }
+
+  .sidebar-icon-color {
+    @apply bg-white text-green-500 hover:bg-green-500 
+  hover:text-white dark:bg-gray-800 dark:hover:bg-green-500;
+  }
+
+  .sidebar-icon-color-main {
+    @apply bg-white text-gray-800 hover:bg-blue-500 hover:text-white
+    dark:bg-gray-800 dark:text-white dark:hover:bg-blue-500;
+  }
+
+  .sidebar-tooltip {
+    @apply pointer-events-none absolute left-14 z-[100] m-2 w-auto min-w-max origin-left scale-95
+    rounded-md bg-white p-2 text-xs
+    font-bold text-gray-900 
+    opacity-0 shadow-md transition-all duration-100 dark:bg-gray-900 dark:text-white;
+  }
+
+  .sidebar-icon:hover .sidebar-tooltip {
+    @apply scale-100 opacity-100;
+  }
+
+  .sidebar-hr {
+    @apply w-8 rounded-full 
+    border border-gray-400 bg-gray-400 dark:border-gray-800
+    dark:bg-gray-800;
+  }
+
+  /* .base-container {
+    @apply;
+  } */
+
+  .channel-bar {
+    @apply relative m-0 flex min-h-0 w-60 flex-shrink-0 flex-grow-0 flex-col items-stretch justify-start
+    overflow-hidden bg-gray-100 dark:bg-gray-800;
+  }
+
+  .channel-block {
+    @apply relative z-[3] items-center py-3 px-4
+    transition duration-100 hover:bg-gray-400;
+  }
+
+  .channel-block-text {
+    @apply h-6 text-base font-semibold
+    text-black dark:text-gray-400;
+  }
+
+  .dropdown-header {
+    @apply relative mx-0 flex h-6 cursor-pointer items-center justify-between pr-2 pl-4 text-gray-500;
+  }
+
+  .top-navigation {
+    @apply relative z-50 flex h-12 w-full flex-shrink-0 flex-grow-0 items-center bg-white bg-opacity-90 py-0 px-2 dark:bg-gray-700;
+  }
+
+  .top-navigation-icon {
+    @apply relative mx-2 h-6 w-auto cursor-pointer text-gray-600 transition duration-75 ease-in-out hover:text-gray-800;
+  }
+
+  .top-navigation-icon:first {
+    @apply ml-auto mr-4;
+  }
+
+  .content-container {
+    @apply relative flex min-h-0 min-w-0 flex-auto flex-col overflow-hidden bg-white dark:bg-gray-700;
+  }
+
+  .content-wrap {
+    @apply relative flex min-h-0 min-w-0 flex-auto flex-row items-stretch justify-evenly;
+  }
+
+  .content-list {
+    @apply relative flex min-h-full flex-col items-stretch justify-end;
+  }
+
+  .post {
+    @apply relative py-0.5 pl-[72px] pr-12 hover:bg-gray-50;
+  }
+
+  .post-selected {
+    @apply bg-green-400 shadow-md dark:bg-gray-900;
+  }
+
+  .post-content {
+    @apply ml-auto flex w-4/5 flex-col justify-start;
+  }
+
+  .avatar {
+    @apply absolute left-4 mt-0.5 h-10 w-10 cursor-pointer
+    overflow-hidden rounded-[50%] bg-gray-100 object-cover;
+  }
+
+  .form-inputBar {
+    @apply relative -mt-2 flex-shrink-0 px-4;
+  }
+
+  .bottom-bar {
+    @apply relative left-88 right-8 bottom-2 flex 
+    h-12 flex-row items-center 
+    justify-between rounded-lg 
+    bg-gray-400 px-2 shadow-lg
+    dark:bg-gray-600;
+  }
+
+  .bottom-bar-input {
+    @apply ml-0 mr-auto
+    w-full cursor-text 
+    bg-transparent font-normal
+    text-gray-800  placeholder-gray-500 outline-none
+    dark:text-gray-400;
+  }
+}
+
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply min-h-[40px] bg-gray-300;
+}
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-track {
+  border: 4px solid transparent;
+  background-clip: padding-box;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  margin-bottom: 8px;
+}
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-track {
+  border: 4px solid transparent;
+  background-clip: padding-box;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
 }
