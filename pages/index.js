@@ -2,7 +2,7 @@ import Head from "next/head";
 
 export default function Home() {
   return (
-    <div className="">
+    <div>
       <Head>
         <title>Discord</title>
         <meta name="Disocrd" content="Rebuilt Discrod App" />

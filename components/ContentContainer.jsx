@@ -1,3 +1,4 @@
+import Image from "next/image";
 import TopNavigation from "./TopNavigation";
 import { BsPlusCircleFill } from "react-icons/bs";
 import { useEffect, useState } from "react";
@@ -43,12 +44,14 @@ const Post = ({ name, timestamp, text }) => {
 
   useEffect(() => {
     getAvatar();
-  }, []);
+  });
 
   return (
     <div className="post mt-[17px]">
       <div className="static">
-        <img src={avatar} alt="" className="avatar" />
+        <div className="avatar">
+          {/* <Image src={avatar} alt=" " height="40" width="40" /> */}
+        </div>
         <h3 className="relative min-h-[22px] font-bold leading-[22px] ">
           <span className="relative mr-1 cursor-pointer hover:underline">
             {name}
