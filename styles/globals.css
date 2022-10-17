@@ -2,13 +2,13 @@
   font-family: "Whitney";
   font-style: normal;
   font-weight: 500;
-  src: local("Whitney"), url("../fonts/whitneymedium.woff") format("woff");
+  src: local("Whitney"), url("/fonts/whitneymedium.woff") format("woff");
 }
 @font-face {
   font-family: "Whitney Book";
   font-style: normal;
   font-weight: 500;
-  src: local("Whitney Book"), url("../fonts/whitneybook.woff") format("woff");
+  src: local("Whitney Book"), url("/fonts/whitneybook.woff") format("woff");
 }
 @import-normalize;
 @tailwind base;
