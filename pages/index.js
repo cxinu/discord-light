@@ -2,7 +2,7 @@ import Head from "next/head";
 import SideBar from "../components/SideBar";
 import BaseContainer from "../components/BaseContainer";
 
-const Home = () => {
+export default function Home() {
   return (
     <div>
       <Head>
@@ -18,6 +18,4 @@ const Home = () => {
       </main>
     </div>
   );
-};
-
-export default Home;
+}
