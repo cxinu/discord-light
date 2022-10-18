@@ -7,6 +7,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Discord</title>
+        <meta content="summary_large_image" name="twitter:card" />
         <meta content="discord-light" property="og:title" />
         <meta content="https://discord-light.vercel.app" property="og:url" />
         <meta content="Rebuilt Discrod App" name="description" />
