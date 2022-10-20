@@ -33,24 +33,28 @@ const ContentContainer = () => {
 };
 
 const Post = ({ name, timestamp, text }) => {
-  const [avatar, setAvatar] = useState([]);
-  const endpoint = methods[Math.floor(Math.random() * methods.length)];
-
-  const getAvatar = async () => {
-    const res = await fetch(`https://hmtai.herokuapp.com/v2/${endpoint}`);
-    const data = await res.json();
-    setAvatar(data.url);
-  };
+  const [avatar, setAvatar] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    const getAvatar = async () => {
+      const endpoint = methods[Math.floor(Math.random() * methods.length)];
+      const res = await fetch(`https://hmtai.herokuapp.com/v2/${endpoint}`);
+      const data = await res.json();
+      setAvatar(data.url);
+    };
+    setIsLoading(true);
     getAvatar();
-  });
+    setIsLoading(false);
+  }, []);
 
   return (
     <div className="post mt-[17px]">
       <div className="static">
         <div className="avatar">
-          {/* <Image src={avatar} alt=" " height="40" width="40" /> */}
+          {!isLoading && avatar && (
+            <Image src={avatar} alt="" layout="fill" objectFit="cover" />
+          )}
         </div>
         <h3 className="relative min-h-[22px] font-bold leading-[22px] ">
           <span className="relative mr-1 cursor-pointer hover:underline">

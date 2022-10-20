@@ -8,6 +8,7 @@ import {
   DiscordSettingsIcon,
 } from "../assets/DiscordIcons";
 import { channels } from "../assets/DummyAPI";
+import Image from "next/image";
 
 const ChannelBar = () => {
   return (
@@ -29,11 +30,14 @@ const ChannelBar = () => {
       <section className="block flex-shrink-0 flex-grow-0 bg-gray-200">
         <div className="mb-[1px] flex h-[52px] items-center px-2 text-sm font-semibold">
           <div className="-ml-0.5 mr-2 flex min-w-[120px] cursor-pointer items-center rounded pl-0.5 hover:bg-gray-400">
-            <img
-              src="https://cdn.discordapp.com/attachments/981694535983833158/988469195215876126/HMmedia.gif"
-              alt=""
-              className="relative mt-0 h-8 w-8 rounded-[50%] object-cover"
-            />
+            <div className="relative mt-0 h-8 w-8 rounded-[50%] overflow-hidden">
+              <Image
+                src="https://cdn.discordapp.com/attachments/981694535983833158/988469195215876126/HMmedia.gif"
+                alt=""
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
             <div className="mr-1 select-none py-1 pl-2">
               <div className="font-['Whitney Semibold'] flex leading-[18px]">
                 lunos
