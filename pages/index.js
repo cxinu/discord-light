@@ -7,10 +7,9 @@ export default function Home() {
     <div>
       <Head>
         <title>Discord</title>
-
         <meta content="discord-light" property="og:title" />
         <meta
-          content="#ffffff absolute russian flashbang white bg."
+          content="very nice app professionaly made in mom's basement with cool feature/bug but importantly #ffffff absolute russian flashbang white bg."
           property="og:description"
         />
         <meta
