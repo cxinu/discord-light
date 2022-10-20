@@ -33,24 +33,11 @@ const ContentContainer = () => {
 };
 
 const Post = ({ name, timestamp, text }) => {
-  const [avatar, setAvatar] = useState([]);
-  const endpoint = methods[Math.floor(Math.random() * methods.length)];
-
-  const getAvatar = async () => {
-    const res = await fetch(`https://hmtai.herokuapp.com/v2/${endpoint}`);
-    const data = await res.json();
-    setAvatar(data.url);
-  };
-
-  useEffect(() => {
-    getAvatar();
-  });
-
   return (
     <div className="post mt-[17px]">
       <div className="static">
         <div className="avatar">
-          {/* <Image src={avatar} alt=" " height="40" width="40" /> */}
+          <img src={`https://avatars.dicebear.com/api/avataaars/${name}.svg`} alt=" " height="40" width="40" />
         </div>
         <h3 className="relative min-h-[22px] font-bold leading-[22px] ">
           <span className="relative mr-1 cursor-pointer hover:underline">
