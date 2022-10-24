@@ -3,6 +3,7 @@ import { FaDiscord } from "react-icons/fa";
 import { IoMdCompass } from "react-icons/io";
 import { IoAddSharp } from "react-icons/io5";
 import { servers } from "../assets/DummyAPI";
+import Image from "next/image";
 
 const SideBar = () => {
   return (
@@ -17,7 +18,14 @@ const SideBar = () => {
         {servers.map((server, id) => (
           <SideBarIcon
             image={true}
-            icon={<img className="sidebar-icon-image" src={server.url} />}
+            icon={
+              <Image
+                className="sidebar-icon-image"
+                alt=" "
+                src={server.url}
+                layout="fill"
+              />
+            }
             text={server.name}
             key={id}
           />
