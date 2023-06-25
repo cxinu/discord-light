@@ -1,15 +1,15 @@
 export const servers = [
   {
-    name: "midjourney",
-    url: "https://cdn.discordapp.com/icons/662267976984297473/e75033be72087a87fa09e91727dac2a4.webp",
+    name: "Midjourney",
+    url: "https://cdn.discordapp.com/attachments/1088327162970513529/1122667567555825774/image.png",
   },
   {
-    name: "rythem",
-    url: "https://cdn.discordapp.com/icons/231471142685245440/ebb16cb944c07a8b4b4371a6d7607601.webp",
+    name: "St. Sebastian",
+    url: "https://cdn.discordapp.com/attachments/1088327162970513529/1122667444633337896/f511834189b06e60d8891e53b2da43c0.png",
   },
   {
-    name: "nvidia",
-    url: "https://cdn.discordapp.com/icons/185647255028629505/a_f830ba3ba453ab63ad73d04dc0e20f78.webp",
+    name: "The Odin Project",
+    url: "https://cdn.discordapp.com/attachments/1088327162970513529/1122667417596862464/45da89e7ff07681319bfc6b66e969abe.png",
   },
 ];
 
