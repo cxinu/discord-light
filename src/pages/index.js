@@ -4,7 +4,7 @@ import BaseContainer from "../components/BaseContainer";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>Discord</title>
         <meta content="discord-light" property="og:title" />
@@ -27,6 +27,6 @@ export default function Home() {
           <BaseContainer />
         </div>
       </main>
-    </div>
+    </>
   );
 }

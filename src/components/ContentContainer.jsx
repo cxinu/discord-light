@@ -37,15 +37,15 @@ const Post = ({ name, timestamp, text }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    const getAvatar = async () => {
-      const endpoint = methods[Math.floor(Math.random() * methods.length)];
-      const res = await fetch(`https://hmtai.herokuapp.com/v2/${endpoint}`);
-      const data = await res.json();
-      setAvatar(data.url);
-    };
-    setIsLoading(true);
-    getAvatar();
-    setIsLoading(false);
+    // const getAvatar = async () => {
+    //   const endpoint = methods[Math.floor(Math.random() * methods.length)];
+    //   const res = await fetch(`https://${endpoint}`);
+    //   const data = await res.json();
+    //   setAvatar(data.url);
+    // };
+    // setIsLoading(true);
+    // getAvatar();
+    // setIsLoading(false);
   }, []);
 
   return (

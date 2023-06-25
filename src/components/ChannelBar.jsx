@@ -32,7 +32,7 @@ const ChannelBar = () => {
           <div className="-ml-0.5 mr-2 flex min-w-[120px] cursor-pointer items-center rounded pl-0.5 hover:bg-gray-400">
             <div className="relative mt-0 h-8 w-8 rounded-[50%] overflow-hidden">
               <Image
-                src="https://cdn.discordapp.com/attachments/981694535983833158/988469195215876126/HMmedia.gif"
+                src="https://cdn.discordapp.com/attachments/1088327162970513529/1122662330698829916/OIP.png"
                 alt=""
                 layout="fill"
                 objectFit="cover"
@@ -40,7 +40,7 @@ const ChannelBar = () => {
             </div>
             <div className="mr-1 select-none py-1 pl-2">
               <div className="font-['Whitney Semibold'] flex leading-[18px]">
-                lunos
+                Antares
               </div>
               <div className="text-xs font-normal leading-[13px] text-gray-600">
                 #1957
