@@ -36,4 +36,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 All the contributions are welcomed.
 
-more on contribute: read [CONTRIBUTING.md](/CONTRIBUTING.md)
+more on contribute: [CONTRIBUTING.md](/CONTRIBUTING.md)
