@@ -20,6 +20,10 @@ The site is deployed on vercel [discord-light](https://discord-light.vercel.app)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 
+### Web App Screenshot
+![discord-light](image.png)
+> App is served live on [`https://discord-light.vercel.app`](https://discord-light.vercel.app)
+
 ## Local Development
 
 First, run the development server:
