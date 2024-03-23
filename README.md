@@ -2,12 +2,16 @@
     <img src="https://i.ibb.co/BVh9mnq/output.png" alt="Discord Light Logo" width="100">
 </p>
 
-# Discord Light
+<h4 align="center">
 
 [![GitHub stars](https://img.shields.io/github/stars/cxinu/discord-light?style=flat)](https://github.com/cxinu/discord-light/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/cxinu/discord-light?style=flat)](https://github.com/cxinu/discord-light/network)
 [![GitHub issues](https://img.shields.io/github/issues/cxinu/discord-light?style=flat)](https://github.com/cxinu/discord-light/issues)
 [![GitHub license](https://img.shields.io/github/license/cxinu/discord-light?style=flat)](https://github.com/cxinu/discord-light/blob/main/LICENSE)
+
+<h4>
+
+# Discord Light
 
 A discord clone built with Next.js and Tailwind CSS.
 
