@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://avatars.githubusercontent.com/u/115516232?s=200&u=0b558de53099a13950acfdaebb0c60e79d0e03a0&v=4" alt="Discord Light Logo" style="width: 100px; height: 100px; border-radius: 50%;">
+    <img src="https://avatars.githubusercontent.com/u/115516232?s=200&u=0b558de53099a13950acfdaebb0c60e79d0e03a0&v=4" alt="Discord Light Logo" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
 </p>
 
 # Discord Light
