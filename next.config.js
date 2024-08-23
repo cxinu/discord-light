@@ -7,5 +7,6 @@ const nextConfig = {
 module.exports = {
   images: {
     domains: ["cdn.discordapp.com"],
+    domains: ['utfs.io'],
   },
 };

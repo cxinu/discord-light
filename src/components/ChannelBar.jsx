@@ -32,7 +32,7 @@ const ChannelBar = () => {
           <div className="-ml-0.5 mr-2 flex min-w-[120px] cursor-pointer items-center rounded pl-0.5 hover:bg-gray-400">
             <div className="relative mt-0 h-8 w-8 rounded-[50%] overflow-hidden">
               <Image
-                src="https://cdn.discordapp.com/attachments/1088327162970513529/1122662330698829916/OIP.png"
+                src="https://utfs.io/f/cbc2408e-92f6-47cf-b9e3-bc03efe0e1c4-2dkq.jpg"
                 alt=""
                 layout="fill"
                 objectFit="cover"

@@ -12,10 +12,6 @@ export default function Home() {
           content="very nice app professionaly made in mom's basement with cool feature/bug but importantly #ffffff absolute russian flashbang white bg."
           property="og:description"
         />
-        <meta
-          content="https://cdn.discordapp.com/attachments/959774329346883626/1031862295430705216/unknown.png"
-          property="og:image"
-        />
         <meta content="https://discord-light.vercel.app" property="og:url" />
         <meta content="summary_large_image" name="twitter:card" />
 
